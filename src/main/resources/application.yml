@@ -1,0 +1,50 @@
+server:
+  port: 9999
+  tomcat:
+    max-swallow-size: 50MB
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password:
+    url:
+  redis:
+    password: 1771250608
+    port: 6379
+  tengxun:
+    SecretId:
+    SecretKey:
+    region:
+    url:
+    bucketName:
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.yang.hdyplm.pojo
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      yang:
+        hdyplm:
+          mapper: debug
+          service: info
+          controller: info
+  file:
+    path: D:\IdeaProjects\WeBlog\weblog.log
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.hdyplm.mapper.PhotoMapper">
+    <insert id="insertForm" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO `photo` (`name`, `time`, `desc`, `cover_url`,`views`,`release_user`,`p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `p7`, `p8`, `p9`, `p10`, `p11`, `p12`) VALUES
+        (#{name},#{time},#{desc},#{coverUrl},#{views},#{releaseUser},#{p1},#{p2},#{p3},#{p4},#{p5},#{p6},#{p7},#{p8},#{p9},#{p10},#{p11},#{p12})
+    </insert>
+</mapper>
